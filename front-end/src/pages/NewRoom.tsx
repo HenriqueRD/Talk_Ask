@@ -2,8 +2,12 @@ import imgAside from '../assets/illustration.svg';
 import { Link } from 'react-router-dom';
 import '../styles/pgNewRoom.scss'
 import Button from '../components/Button';
+import { useContext } from 'react';
+import { authContext } from '../context/AuthContext';
 
 export function NewRoom() {
+
+  const { user } = useContext(authContext);
 
     return (
       <div id="pageNewRoom">
@@ -20,6 +24,7 @@ export function NewRoom() {
         <main>
           <div className="create">
             <h1>Talk_Ask</h1>
+            <h3>Ola {user?.name}</h3>
             <h2>Crie uma nova sala</h2>
             <form>
               <input type="text" placeholder="Nome da sala" />

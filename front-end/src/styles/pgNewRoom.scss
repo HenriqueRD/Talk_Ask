@@ -88,13 +88,18 @@
 
             p {
                 color: #58585c;
-                margin-top: 10px;
+                margin-top: 15px;
                 font-size: 14px;
                 
                 a {
                     font-weight: bold;
+                    font-size: 15px;
                     text-decoration: none;
                     color: #653fd6;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

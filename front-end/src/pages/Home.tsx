@@ -2,13 +2,20 @@ import imgAside from '../assets/illustration.svg';
 import imgGoogle from '../assets/google.svg';
 import '../styles/pgHome.scss'
 import Button from '../components/Button';
+import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { authContext } from '../context/AuthContext';
 
 export function Home() {
 
   const history = useHistory();
+  const { user, signInWithGoogle } = useContext(authContext);
 
-  function navToNewRoom() {
+  async function navToNewRoom() {
+    if(!user) {
+      await signInWithGoogle();
+    }
+    
     history.push('/sala/criar');
   }
 
