@@ -103,14 +103,14 @@ export function Room() {
             </strong>
           </Link>
           <RoomId code={params.id}/>   
-        </div>
+        </div></header>
         <hr style={{
           border: 0,
           backgroundColor: '#E2E2E2',
           height: 2
         }} />
-      </header>
-      <main>
+      
+      <main className="mainQuestions">
         <div className="containerM">
           <div className="titleRoom">
             <h1>{nameRoom}</h1>

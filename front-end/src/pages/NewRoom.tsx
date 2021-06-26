@@ -6,10 +6,10 @@ import { Link, useHistory } from 'react-router-dom';
 import  toast from 'react-hot-toast';
 
 import { database } from "../services/firebase"
-import imgAside from '../assets/illustration.svg';
 import Button from '../components/Button';
 
 import '../styles/pgNewRoom.scss'
+import Aside from '../components/Aside';
 
 export function NewRoom() {
 
@@ -37,16 +37,7 @@ export function NewRoom() {
 
   return (
     <div id="pageNewRoom">
-      <aside>       
-        <img src={imgAside} alt="" />
-        <strong>
-            Toda pergunta tem uma resposta.
-        </strong>
-        <p>
-          Aprenda e compartilhe conhecimentocom outras pessoas
-        </p>
-        <div className="mobile"></div>
-      </aside>
+     <Aside />
       <main>
         <div className="create">
           <h1>Talk_Ask</h1>

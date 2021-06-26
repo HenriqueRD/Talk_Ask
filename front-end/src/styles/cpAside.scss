@@ -1,0 +1,45 @@
+#cpAside {
+    flex: 2;
+
+    aside {
+        padding: 30px 60px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        color: #fff;
+        background-color: #835afd;
+
+        img { 
+            margin-left: 30px;
+            max-width: 355px;
+        }
+
+        strong {
+            width: 95%;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 42px;
+        }
+        
+        p {
+            opacity: .85;
+            font-size: 23px;
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    #cpAside {
+       display: none;
+    }
+}
+
+@media (max-height: 700px) {
+    .mobileH {
+        display: none;
+     }
+}

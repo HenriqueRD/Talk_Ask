@@ -32,7 +32,8 @@
         }
     }
 
-    main {
+    .mainQuestions {
+        margin-top: 0 !important;
         .containerM {
             padding: 15px 20px;
             max-width: 1020px;
@@ -50,6 +51,7 @@
             }
 
             span {
+                text-align: center;
                 margin-left: 20px;
                 display: flex;
                 align-items: center;
@@ -117,4 +119,30 @@
             }
         }
     }  
+}
+
+@media (max-width: 590px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        a {
+            display: none;
+        }
+    }
+    .containerM { 
+        margin-top: 20px;
+    }
+
+    .titleRoom {
+        h1 {
+            font-size: 25px !important;
+        }
+        span {
+            margin-left: 10px !important;
+            padding: 10px 20px !important; 
+
+        }
+    }
 }

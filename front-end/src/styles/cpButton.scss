@@ -26,3 +26,9 @@
         cursor: not-allowed;
     }
 }
+
+@media (max-width: 565px) {
+    #cpButton {
+        padding: 0 10px;
+    }  
+}

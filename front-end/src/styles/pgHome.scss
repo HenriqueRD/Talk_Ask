@@ -1,37 +1,6 @@
 #pageHome {
     display: flex;
     align-items: stretch;
-    height: 100vh;
-
-    aside {
-        flex: 2;
-
-        padding: 30px 60px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        color: #fff;
-        background-color: #835afd;
-
-        img { 
-            margin-left: 30px;
-            max-width: 355px;
-        }
-
-        strong {
-            width: 95%;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            font-size: 42px;
-        }
-        
-        p {
-            opacity: .85;
-            font-size: 23px;
-        }
-    }
 
     main {
         flex: 3;
@@ -141,5 +110,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 850px) {
+    main {
+        margin-top: 90px;
     }
 }

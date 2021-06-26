@@ -2,9 +2,10 @@ import imgAside from '../assets/illustration.svg';
 import imgGoogle from '../assets/google.svg';
 import '../styles/pgHome.scss'
 import Button from '../components/Button';
+import Aside from '../components/Aside';
 import { FormEvent } from "react";
 import { useContext, useState } from 'react';
-import  toast, { Toaster } from 'react-hot-toast';
+import  toast from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
 import { authContext } from '../context/AuthContext';
 import { database } from '../services/firebase';
@@ -44,16 +45,7 @@ export function Home() {
 
     return (
       <div id="pageHome">
-        <aside> 
-          <img src={imgAside} alt="" />
-          <strong>
-            Toda pergunta tem uma resposta.
-          </strong>
-          <p>
-            Aprenda e compartilhe conhecimentocom outras pessoas
-          </p>
-          <div className="mobile"></div>
-        </aside>
+        <Aside />
         <main>
           <div className="login">
             <h1>Talk_Ask</h1>
@@ -73,4 +65,3 @@ export function Home() {
   }
   
   export default Home;
-  
