@@ -1,0 +1,120 @@
+#pageRoom {
+
+    header {   
+        .containerH {
+            padding: 15px 20px;
+            max-width: 1200px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+
+        }
+
+        a { 
+            color: #835AFD;
+            font-size: 35px;
+            text-decoration: none;
+
+            transition: all .2s;
+
+            &:hover {
+                font-size: 42px;
+                color: #653fd6;
+            }
+        }
+
+        span {
+            color: #29292E;
+            border: 2px solid #835AFD;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+
+    main {
+        .containerM {
+            padding: 15px 20px;
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+
+        .titleRoom {
+            display: flex;
+            align-items: center;
+            margin: 50px 0 30px 0;
+
+            h1 {
+                font-size: 34px;
+                color: #29292E;
+            }
+
+            span {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: #fff;
+                background-color: #835AFD;
+                border-radius: 200px;
+                padding: 8px 17px;
+            }
+        }
+
+        .newQuestion {
+            textarea {
+                width: 100%;
+                resize: vertical;
+                min-height: 130px;
+                border: 0;
+                border-radius: 15px;
+                padding: 18px;
+                background-color: #fefefe;
+                box-shadow: 0 3px 12px 0 rgba(0.0, 0.0, 0.0, 0.05)
+            }
+
+            .formFooter {
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .notUser {
+                    color: #737380;
+                    font-weight: 500;
+
+                    .loginForm {
+                        background-color: transparent;
+                        font-weight: bold;
+                        text-decoration: none;
+                        color: #653fd6;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .user {
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+
+                    img { 
+                        width: 45px;
+                        border-radius: 10000px;
+                    }
+
+                    span {
+                        margin-left: 15px;
+                        color: #29292E;
+                        font-weight: bold;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }  
+}

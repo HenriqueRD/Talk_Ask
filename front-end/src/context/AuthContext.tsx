@@ -44,7 +44,7 @@ function AuthContextProvider(props: AuthContextProviderProps) {
         }
 
     }, []);
-  
+    
     async function signInWithGoogle() {
 
         const provider = new firebase.auth.GoogleAuthProvider();
@@ -71,6 +71,5 @@ function AuthContextProvider(props: AuthContextProviderProps) {
         </authContext.Provider>
     );
 }
-
 
 export default AuthContextProvider;

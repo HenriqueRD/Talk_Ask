@@ -2,13 +2,17 @@ import imgAside from '../assets/illustration.svg';
 import imgGoogle from '../assets/google.svg';
 import '../styles/pgHome.scss'
 import Button from '../components/Button';
-import { useContext } from 'react';
+import { FormEvent } from "react";
+import { useContext, useState } from 'react';
+import  toast, { Toaster } from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
 import { authContext } from '../context/AuthContext';
+import { database } from '../services/firebase';
 
 export function Home() {
 
   const history = useHistory();
+  const [ idRoom, setIdRoom ] = useState('');
   const { user, signInWithGoogle } = useContext(authContext);
 
   async function navToNewRoom() {
@@ -19,13 +23,31 @@ export function Home() {
     history.push('/sala/criar');
   }
 
+  async function joinRoom(event: FormEvent) {
+    event.preventDefault();
+
+    if(idRoom.trim() === '') {
+      toast.error('Você precisa digitar o código da sala!');
+      return;
+    }
+
+    const roomRef = database.ref(`rooms/${idRoom}`).get();
+
+    if (!(await roomRef).exists()) {
+      toast.error('Sala não encontrada!');
+      return;
+    }
+    
+    toast.success('Sucesso!!!');
+    history.push(`/sala/${idRoom}`);
+  }
+
     return (
       <div id="pageHome">
-        <aside>
-          
+        <aside> 
           <img src={imgAside} alt="" />
           <strong>
-              Toda pergunta tem uma resposta.
+            Toda pergunta tem uma resposta.
           </strong>
           <p>
             Aprenda e compartilhe conhecimentocom outras pessoas
@@ -40,9 +62,9 @@ export function Home() {
               Crie sua sala com o Google
             </button>
             <div className="divison">ou entre em uma sala</div>
-            <form>
-              <input type="text" placeholder="Digite o código da sala" />
-              <Button onClick={navToNewRoom} type="submit" title="	--&gt; ] Entrar na sala" />
+            <form onSubmit={joinRoom}>
+              <input type="text" placeholder="Digite o código da sala" onChange={event => setIdRoom(event.target.value)} value={idRoom} />
+              <Button type="submit" title="	--&gt; ] Entrar na sala" />
             </form>
           </div>
         </main>

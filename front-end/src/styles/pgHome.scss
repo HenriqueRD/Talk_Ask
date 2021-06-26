@@ -132,7 +132,11 @@
 
                 transition: border-color .2s;
 
-               &:focus {
+                &:focus {
+                    border-color: #653fd6;
+                }
+
+                &:hover {
                     border-color: #653fd6;
                 }
             }
