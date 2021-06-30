@@ -3,11 +3,12 @@ import copy from '../assets/copy.svg';
 
 import '../styles/cpRoomId.scss';
 
-type RoomId = {
+type RoomCode = {
     code: string;
 }
 
-export function RoomId(props: RoomId) {
+export function RoomId(props: RoomCode) {
+    
     function copyIdRoom() {
         navigator.clipboard.writeText(props.code);
         toast.success('Copiado!');
@@ -15,7 +16,7 @@ export function RoomId(props: RoomId) {
 
   return (
     <div id="cpRoomId">
-        <button onClick={copyIdRoom}>
+        <button onClick={copyIdRoom} title="Copiar código da sala">
             <div>
                 <img src={copy} alt=""/>
             </div>

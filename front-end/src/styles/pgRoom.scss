@@ -1,5 +1,4 @@
 #pageRoom {
-
     header {   
         .containerH {
             padding: 15px 20px;
@@ -19,8 +18,8 @@
             transition: all .2s;
 
             &:hover {
-                font-size: 42px;
-                color: #653fd6;
+                font-size: 43px;
+                color: #E73F5D;
             }
         }
 
@@ -29,6 +28,14 @@
             border: 2px solid #835AFD;
             border-radius: 10px;
             padding: 10px;
+        }
+        .isAdmin {
+            button{ 
+                height: 45px;
+            }
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
     }
 
@@ -65,6 +72,8 @@
         }
 
         .newQuestion {
+            margin-bottom: 50px;
+            
             textarea {
                 width: 100%;
                 resize: vertical;
@@ -73,11 +82,11 @@
                 border-radius: 15px;
                 padding: 18px;
                 background-color: #fefefe;
-                box-shadow: 0 3px 12px 0 rgba(0.0, 0.0, 0.0, 0.05)
+                box-shadow: 0 3px 12px 0 rgba(0.0, 0.0, 0.0, 0.05);
             }
 
             .formFooter {
-
+                margin-top: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;

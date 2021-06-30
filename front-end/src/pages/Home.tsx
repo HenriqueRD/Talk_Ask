@@ -1,4 +1,3 @@
-import imgAside from '../assets/illustration.svg';
 import imgGoogle from '../assets/google.svg';
 import '../styles/pgHome.scss'
 import Button from '../components/Button';
@@ -28,17 +27,25 @@ export function Home() {
     event.preventDefault();
 
     if(idRoom.trim() === '') {
+      setIdRoom('');
       toast.error('Você precisa digitar o código da sala!');
       return;
     }
 
-    const roomRef = database.ref(`rooms/${idRoom}`).get();
+    const roomRef = await database.ref(`rooms/${idRoom}`).get();
 
-    if (!(await roomRef).exists()) {
+    if (!roomRef.exists()) {
+      setIdRoom('');
       toast.error('Sala não encontrada!');
       return;
     }
-    
+
+    if (roomRef.val().endDate) {
+      toast.error('Sala encerrada!');
+      return;
+    }
+
+    setIdRoom('');
     toast.success('Sucesso!!!');
     history.push(`/sala/${idRoom}`);
   }

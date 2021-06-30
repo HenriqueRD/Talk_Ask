@@ -1,5 +1,4 @@
 import imgAside from '../assets/illustration.svg';
-import Button from '../components/Button';
 
 import '../styles/cpAside.scss'
 

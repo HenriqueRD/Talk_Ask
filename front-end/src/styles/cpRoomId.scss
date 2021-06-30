@@ -1,7 +1,7 @@
 #cpRoomId {              
     button {
         height: 45px;
-        color: #29292E;
+        color: #835AFD;
         background-color: #fff;
         border: 2px solid #835AFD;
         border-radius: 10px;
@@ -9,16 +9,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all .3s;
 
         div {        
             background-color: #835AFD;
             padding: 10px;
+            transition: all .2s;
         }
 
         strong {
             flex: 1;
             margin: 0 10px;
           
+        }
+        &:hover {
+            color: #fff;
+            border-color: #E73F5D;
+            background-color: #E73F5D;
+            div{
+                background-color: #E73F5D;
+                border-color: #fff;
+            }
         }
     }
 }

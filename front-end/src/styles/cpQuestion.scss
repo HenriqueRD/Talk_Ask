@@ -1,0 +1,72 @@
+#cpQuestion {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 15px;
+
+    margin-top: 10px;
+
+    box-shadow: 0 3px 12px 0 rgba(0.0, 0.0, 0.0, 0.05);
+
+     
+    p {
+            font-size: 18px;
+            color: #29292E;
+    }
+    
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .name {
+        display: flex;
+        align-items: center;
+
+        margin-top: 18px;
+
+        img { 
+            width: 40px;
+            border-radius: 10000px;
+        }
+
+        span {
+            margin-left: 15px;
+            color: #4f4f50;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    
+    button {
+        background-color: transparent;
+        &.buttonLike {
+            display: flex;
+            align-items: flex-end;
+            color: #737380;
+            gap: 5px;
+            
+            &.liked {
+            color: #835afd;
+
+                svg path {
+                    stroke: #835afd;
+                }
+            }
+            &:hover {
+                color: #835afd;
+    
+                svg path {
+                    stroke: #835afd;
+                }
+            }
+
+        }
+
+        &:hover {
+
+            svg path {
+                stroke: #835afd;
+            }
+        }
+    }
+}

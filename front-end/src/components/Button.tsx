@@ -2,16 +2,16 @@ import { ButtonHTMLAttributes } from "react";
 
 import '../styles/cpButton.scss';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    isOutLine?: boolean
+};
 
-export function Button(props : ButtonProps) {
-
+export function Button({isOutLine = false, ...props} : ButtonProps) {
     return (
-        <button id="cpButton" {...props}>
+        <button id="cpButton" className={` ${isOutLine ? 'outline' : ''}`} {...props}>
             {props.title}
         </button>
     );
-  }
+}
   
-  export default Button;
-  
+export default Button;

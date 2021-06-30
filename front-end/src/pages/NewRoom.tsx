@@ -41,8 +41,11 @@ export function NewRoom() {
       <main>
         <div className="create">
           <h1>Talk_Ask</h1>
-          <h3>Ola {user?.name}</h3>
-          <h2>Crie uma nova sala</h2>
+          <div className="infoUser">
+            <img src={user?.photo} alt=""/>
+            <span>{user?.name}</span>
+          </div>
+          <h2>Crie uma sala</h2>
           <form onSubmit={createRoom}>
             <input type="text" placeholder="Nome da sala" onChange={event => setNewRoom(event.target.value)} />
             <Button type="submit" title="Criar sala" />
