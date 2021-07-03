@@ -36,7 +36,10 @@
             font-size: 16px;
         }
     }
-    
+    .buttonAdmin{
+        display: flex;
+        gap: 12px;
+    }
     button {
         background-color: transparent;
         &.buttonLike {
@@ -63,8 +66,7 @@
         }
 
         &:hover {
-
-            svg path {
+            svg path, circle {
                 stroke: #835afd;
             }
         }

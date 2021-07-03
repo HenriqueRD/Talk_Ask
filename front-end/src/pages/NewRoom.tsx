@@ -25,6 +25,12 @@ export function NewRoom() {
       return;
     }
 
+    if(user === undefined) {
+      history.push(`/`);
+      toast.error('Você precisa se autenticar!!!');
+      return;
+    }
+
     const roomRef = database.ref('rooms');
     const firebaseRoom = await roomRef.push({
       title: newRoom,
@@ -36,7 +42,14 @@ export function NewRoom() {
   }
 
   return (
+    
     <div id="pageNewRoom">
+      {
+        user === undefined && 
+        (
+          history.push('/')
+        )
+      }
      <Aside />
       <main>
         <div className="create">

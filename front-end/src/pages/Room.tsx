@@ -9,6 +9,7 @@ import { authContext } from '../context/AuthContext';
 import Button from '../components/Button';
 import RoomId from '../components/RoomId';
 import Question from '../components/Question';
+import NotQuestion from '../components/NotQuestion';
 
 import '../styles/pgRoom.scss';
 import { useRoom } from '../hook/useRoom';
@@ -17,7 +18,7 @@ import { useEffect } from 'react';
 type paramsCode = {
   id: string;
 }
-// { user?.id === await roomRefer.val().authorId) }
+
 export function Room() {
 
   const { user, signInWithGoogle } = useContext(authContext);
@@ -165,7 +166,7 @@ export function Room() {
             ) 
             : 
             (
-            <p>sdasd</p>
+              <NotQuestion />
             ) 
           }         
         </div>
