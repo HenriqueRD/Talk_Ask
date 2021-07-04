@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import cx from "classnames";
 
 import '../styles/cpQuestion.scss';
 
@@ -8,15 +9,16 @@ type QuestionProps = {
       photo: string,
     },
     content: string,
+    isAnswer?: boolean,
+    isHighLighted?: boolean, 
     children?: ReactNode,
 };
 
-export function Question({ author, content, children}: QuestionProps) {
-    
+export function Question({ author, content, children, isAnswer= false, isHighLighted= false }: QuestionProps) {
     return (
-        <div id="cpQuestion">
+        <div id="cpQuestion" className={cx( { answer: isAnswer }, { highLighted: isHighLighted && !isAnswer} )}>
             <p>{content}</p>
-            <div className="info">
+            <div className={`info`}>
                 <div className="name">
                     <img src={author.photo} alt=""/>
                     <span>{author.name}</span>

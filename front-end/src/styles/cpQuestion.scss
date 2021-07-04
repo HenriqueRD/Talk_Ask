@@ -71,4 +71,29 @@
             }
         }
     }
+    
 }
+
+.highLighted {
+    border: 2px solid #835AFD;
+    background-color: #F4F0FF !important;
+
+    .info span{
+        font-weight: bold !important;
+    }
+    .isHigh { 
+        svg path {
+            stroke: #6135e6;
+        }
+    }
+}
+
+.answer {
+    background-color: #DBDCDD !important;
+
+    .isAnswer {
+        svg path, circle {
+            stroke: #835afd;
+        }
+    }
+} 
