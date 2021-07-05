@@ -7,7 +7,7 @@
 
     background-color: #835AFD;
     color: #fff;
-    border: 2px solid #835AFD;
+    border: 2px solid #835AFD !important;
     border-radius: 10px;
     font-weight: bold;
     font-size: 18px;
@@ -37,6 +37,13 @@
             border: 2px solid #E73F5D !important;
         }
     }
+}
+.dark {
+    button {
+        background-color: transparent !important;
+        border-color: #fff;
+    }
+
 }
 
 @media (max-width: 565px) {

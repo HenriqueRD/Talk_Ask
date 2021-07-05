@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import cx from "classnames";
 
-import '../styles/cpQuestion.scss';
+import './cpQuestion.scss';
 
 type QuestionProps = {
     author: {

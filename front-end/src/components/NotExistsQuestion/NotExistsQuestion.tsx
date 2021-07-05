@@ -1,4 +1,4 @@
-import '../styles/cpNotQuestion.scss';
+import './cpNotQuestion.scss';
 
 export function NotQuestion() {
 

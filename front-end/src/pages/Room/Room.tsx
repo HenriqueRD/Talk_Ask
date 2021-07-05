@@ -4,15 +4,15 @@ import { useParams } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 
-import { database } from '../services/firebase';
-import { authContext } from '../context/AuthContext';
-import Button from '../components/Button';
-import RoomId from '../components/RoomId';
-import Question from '../components/Question';
-import NotQuestion from '../components/NotQuestion';
+import { database } from '../../services/firebase';
+import { authContext } from '../../context/AuthContext';
+import Button from '../../components/Button/Button';
+import RoomId from '../../components/RoomId/RoomId';
+import Question from '../../components/Question/Question';
+import NotQuestion from '../../components/NotExistsQuestion/NotExistsQuestion';
 
-import '../styles/pgRoom.scss';
-import { useRoom } from '../hook/useRoom';
+import './pgRoom.scss';
+import { useRoom } from '../../hook/useRoom';
 import { useEffect } from 'react';
 
 type paramsCode = {

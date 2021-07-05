@@ -1,14 +1,18 @@
 import { ButtonHTMLAttributes } from "react";
+import { useTheme } from "../../hook/useTheme";
 
-import '../styles/cpButton.scss';
+import './cpButton.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     isOutLine?: boolean
 };
 
 export function Button({isOutLine = false, ...props} : ButtonProps) {
+    
+    const { theme } = useTheme();
+
     return (
-        <button id="cpButton" className={` ${isOutLine ? 'outline' : ''}`} {...props}>
+        <button id="cpButton" className={` ${theme} ${isOutLine ? 'outline' : ''}`} {...props}>
             {props.title}
         </button>
     );

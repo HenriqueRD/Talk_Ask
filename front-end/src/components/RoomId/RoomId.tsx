@@ -1,7 +1,7 @@
 import  toast from 'react-hot-toast';
-import copy from '../assets/copy.svg';
+import copy from '../../assets/copy.svg';
 
-import '../styles/cpRoomId.scss';
+import './cpRoomId.scss';
 
 type RoomCode = {
     code: string;

@@ -2,14 +2,14 @@ import { Link, useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-import { database } from '../services/firebase';
-import { useRoom } from '../hook/useRoom';
-import Button from '../components/Button';
-import RoomId from '../components/RoomId';
-import Question from '../components/Question';
+import { database } from '../../services/firebase';
+import { useRoom } from '../../hook/useRoom';
+import Button from '../../components/Button/Button';
+import RoomId from '../../components/RoomId/RoomId';
+import Question from '../../components/Question/Question';
 
-import '../styles/pgAdminRoom.scss';
-import NotQuestion from '../components/NotQuestion';
+import './pgAdminRoom.scss';
+import NotQuestion from '../../components/NotExistsQuestion/NotExistsQuestion';
 
 type paramsCode = {
   id: string;

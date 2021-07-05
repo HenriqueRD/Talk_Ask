@@ -1,15 +1,15 @@
 import { useContext } from 'react';
-import { authContext } from '../context/AuthContext';
+import { authContext } from '../../context/AuthContext';
 import { useState } from 'react';
 import { FormEvent } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import  toast from 'react-hot-toast';
 
-import { database } from "../services/firebase"
-import Button from '../components/Button';
+import { database } from "../../services/firebase"
+import Button from '../../components/Button/Button';
 
-import '../styles/pgNewRoom.scss'
-import Aside from '../components/Aside';
+import './pgNewRoom.scss'
+import Aside from '../../components/Aside/Aside';
 
 export function NewRoom() {
 

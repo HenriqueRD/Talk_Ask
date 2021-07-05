@@ -1,17 +1,19 @@
-import imgGoogle from '../assets/google.svg';
-import '../styles/pgHome.scss'
-import Button from '../components/Button';
-import Aside from '../components/Aside';
+import imgGoogle from '../../assets/google.svg';
+import './pgHome.scss'
+import Button from '../../components/Button/Button';
+import Aside from '../../components/Aside/Aside';
 import { FormEvent } from "react";
 import { useContext, useState } from 'react';
 import  toast from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
-import { authContext } from '../context/AuthContext';
-import { database } from '../services/firebase';
+import { authContext } from '../../context/AuthContext';
+import { database } from '../../services/firebase';
+import { useTheme } from '../../hook/useTheme';
 
 export function Home() {
 
   const history = useHistory();
+  const { theme, changeTheme } = useTheme();
   const [ idRoom, setIdRoom ] = useState('');
   const { user, signInWithGoogle } = useContext(authContext);
 
@@ -51,10 +53,11 @@ export function Home() {
   }
 
     return (
-      <div id="pageHome">
+      <div id="pageHome" className={theme}>
         <Aside />
         <main>
           <div className="login">
+            <button onClick={changeTheme}>{theme}</button>
             <h1>Talk_Ask</h1>
             <button onClick={navToNewRoom} className="btnGoogle">
               <img src={imgGoogle} alt=""/>

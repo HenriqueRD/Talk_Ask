@@ -1,6 +1,6 @@
-import imgAside from '../assets/illustration.svg';
+import imgAside from '../../assets/illustration.svg';
 
-import '../styles/cpAside.scss'
+import './cpAside.scss'
 
 export function Aside() {
 
