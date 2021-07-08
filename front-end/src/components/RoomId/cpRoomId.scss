@@ -2,7 +2,7 @@
     button {
         height: 45px;
         color: #835AFD;
-        background-color: #fff;
+        background-color: #fff !important;
         border: 2px solid #835AFD;
         border-radius: 10px;
         overflow: hidden;
@@ -24,8 +24,8 @@
         }
         &:hover {
             color: #fff;
-            border-color: #E73F5D;
-            background-color: #E73F5D;
+            border-color: #E73F5D!important;
+            background-color: #E73F5D!important;
             div{
                 background-color: #E73F5D;
                 border-color: #fff;

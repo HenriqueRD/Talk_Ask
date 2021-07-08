@@ -13,7 +13,7 @@
             color: #29292E;
     }
     
-    .info {
+    .infoQuestion {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -73,7 +73,22 @@
     }
     
 }
+.dark .children{
+    button {
+        background-color: transparent!important;
+    }
+}
 
+.dark #cpQuestion{
+    background-color: #8b8b8b22!important;
+
+    p {
+        color: #dddd;
+    }
+    .name span {
+        color: #dddd !important;
+    }
+}
 .highLighted {
     border: 2px solid #835AFD;
     background-color: #F4F0FF !important;

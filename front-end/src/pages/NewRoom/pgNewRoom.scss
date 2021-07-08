@@ -1,6 +1,7 @@
 #pageNewRoom {
     display: flex;
     align-items: stretch;
+    transition: all .3s;
 
     main {
         flex: 3;
@@ -24,6 +25,7 @@
         }
 
         h1 {
+            transition: all .3s;
             color: #653fd6;
             margin-bottom: 40px;
             font-size: 40px;
@@ -46,6 +48,8 @@
         }
 
         h2 {
+            transition: all .3s;
+
             color: #58585c;
             margin-bottom: 15px;
             font-size: 24px;
@@ -92,6 +96,20 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.dark {
+    .infoUser {
+        color: #DDD!important;
+    }
+    .create {
+        h2 {
+            color: #DDD !important;
+        }
+        p {
+            color: #DDD !important;;
         }
     }
 }

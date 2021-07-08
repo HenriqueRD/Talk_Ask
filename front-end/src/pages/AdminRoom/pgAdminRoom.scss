@@ -48,6 +48,7 @@
 
             h1 {
                 font-size: 34px;
+                text-align: center;
                 color: #29292E;
             }
 
@@ -66,7 +67,14 @@
         }
     }  
 }
-
+.dark  #pageAdminRoom {
+    h1 {
+        color: #dddd!important;
+    }
+    span {
+        color: #f1f0f0!important;
+    }
+}
 @media (max-width: 590px) {
     header {
         display: flex;

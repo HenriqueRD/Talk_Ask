@@ -1,7 +1,8 @@
 #cpAside {
     flex: 2;
-
+    
     aside {
+        transition: all .270s;
         padding: 30px 60px;
         height: 100vh;
         display: flex;
@@ -18,6 +19,7 @@
         }
 
         strong {
+            transition: all .3s;
             width: 95%;
             margin-top: 25px;
             margin-bottom: 12px;
@@ -25,12 +27,16 @@
         }
         
         p {
+            transition: all .3s;
             opacity: .85;
             font-size: 23px;
         }
     }
 }
-
+.dark  aside{
+    background-color: #151518!important;
+    color: #DDD!important;
+}
 
 @media (max-width: 850px) {
     #cpAside {

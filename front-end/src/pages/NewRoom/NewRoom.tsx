@@ -10,10 +10,12 @@ import Button from '../../components/Button/Button';
 
 import './pgNewRoom.scss'
 import Aside from '../../components/Aside/Aside';
+import { useTheme } from '../../hook/useTheme';
 
 export function NewRoom() {
 
   const history = useHistory();
+  const { theme, changeTheme } = useTheme();
   const [newRoom, setNewRoom] = useState('');
   const { user } = useContext(authContext);
 
@@ -43,7 +45,7 @@ export function NewRoom() {
 
   return (
     
-    <div id="pageNewRoom">
+    <div id="pageNewRoom" className={theme}>
       {
         user === undefined && 
         (
@@ -53,6 +55,7 @@ export function NewRoom() {
      <Aside />
       <main>
         <div className="create">
+          <button title={theme} onClick={changeTheme} >{theme}</button>
           <h1>Talk_Ask</h1>
           <div className="infoUser">
             <img src={user?.photo} alt=""/>

@@ -10,6 +10,7 @@ import Question from '../../components/Question/Question';
 
 import './pgAdminRoom.scss';
 import NotQuestion from '../../components/NotExistsQuestion/NotExistsQuestion';
+import { useTheme } from '../../hook/useTheme';
 
 type paramsCode = {
   id: string;
@@ -18,6 +19,7 @@ type paramsCode = {
 export function AdminRoom() {
 
     const history = useHistory();
+    const { theme } = useTheme();
     const params = useParams<paramsCode>();
     const { questionRoom, nameRoom } = useRoom(params);
 
@@ -35,7 +37,6 @@ export function AdminRoom() {
         toast.success("Visão Usuário");
         history.push(`/sala/${params.id}`);
     }
-    
     
     async function deleteQuestion(questionId: string) {
             if(window.confirm("Tem certeza que você deseja excluir esta pergunta?")) {
@@ -78,6 +79,7 @@ export function AdminRoom() {
     }
 
     return (
+        <div className={theme}>
         <div id="pageAdminRoom">
             <header>
                 <div className="containerH">
@@ -93,11 +95,16 @@ export function AdminRoom() {
                     </div>
                 </div>
             </header>
-            <hr style={{
-                border: 0,
-                backgroundColor: '#E2E2E2',
-                height: 2
-            }} /> 
+            {
+                theme === 'light' && 
+                (
+                    <hr style={{
+                        border: 0,
+                        backgroundColor: '#E2E2E2',
+                        height: 2
+                    }} />
+                )
+            }
             <main className="mainQuestions">
                 <div className="containerM">
                     <div className="titleRoom">
@@ -155,6 +162,7 @@ export function AdminRoom() {
                     }         
                 </div>
             </main>
+        </div>
         </div>
     );
 }

@@ -14,6 +14,7 @@ import NotQuestion from '../../components/NotExistsQuestion/NotExistsQuestion';
 import './pgRoom.scss';
 import { useRoom } from '../../hook/useRoom';
 import { useEffect } from 'react';
+import { useTheme } from '../../hook/useTheme';
 
 type paramsCode = {
   id: string;
@@ -21,6 +22,7 @@ type paramsCode = {
 
 export function Room() {
 
+  const { theme } = useTheme();
   const { user, signInWithGoogle } = useContext(authContext);
   const params = useParams<paramsCode>();
   const [ newQuestion, setNewQuestion ] = useState('');
@@ -95,6 +97,7 @@ export function Room() {
   }, [user, params.id]);
 
   return (
+    <div className={theme}>
     <div id="pageRoom">
       <header>
         <div className="containerH">
@@ -113,11 +116,16 @@ export function Room() {
           </div>
         </div>
       </header>
-      <hr style={{
-        border: 0,
-        backgroundColor: '#E2E2E2',
-        height: 2
-      }} /> 
+      {
+        theme === 'light' && 
+        (
+            <hr style={{
+                border: 0,
+                backgroundColor: '#E2E2E2',
+                height: 2
+            }} />
+        )
+      }
       <main className="mainQuestions">
         <div className="containerM">
           <div className="titleRoom">
@@ -192,6 +200,7 @@ export function Room() {
           }         
         </div>
       </main>
+    </div>
     </div>
   );
 }
