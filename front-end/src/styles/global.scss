@@ -6,19 +6,25 @@
 
 body {
     background-color: #f8f8f8;
+    
 }
 
 body, input, button, textarea {
     font: 400 16px 'Inter', sans-serif;
     outline: none;
+    transition: all .3s;
 }
 
 button {
     border: 0;
     cursor: pointer;
 }
+.light {
+    transition: all .3s;
+
+}
 .dark {
-  
+    transition: all .3s;
     background-color: #121214;
     header {
         background-color: #212125 !important;

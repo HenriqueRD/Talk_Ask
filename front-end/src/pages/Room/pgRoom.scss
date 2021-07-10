@@ -1,4 +1,6 @@
 #pageRoom {
+
+
     header {   
         .containerH {
             padding: 15px 20px;
@@ -129,7 +131,29 @@
         }
     }  
 }
+.dark {
+    .titleRoom {
+        h1 {
+            color: #ddd !important;
+        }
+        span {
+            color: #ddd !important;
+        }
+    }
 
+    .newQuestion {
+        textarea {
+            background-color: #8b8b8b22 !important;
+            color: #ddd !important;
+        }
+
+        .user {
+            span {
+                color: #ddd !important;
+            }
+        }
+    }
+}
 @media (max-width: 590px) {
     header {
         display: flex;

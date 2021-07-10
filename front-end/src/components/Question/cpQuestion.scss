@@ -102,13 +102,28 @@
         }
     }
 }
-
+.light {
+    .answer {
+    
+        background-color: #DBDCDD !important;
+    }
+}
 .answer {
-    background-color: #DBDCDD !important;
-
     .isAnswer {
         svg path, circle {
             stroke: #835afd;
         }
     }
 } 
+
+.dark {
+    .answer {
+        background-color: #181818 !important;
+    
+        .isAnswer {
+            svg path, circle {
+                stroke: #835afd;
+            }
+        }
+    } 
+}

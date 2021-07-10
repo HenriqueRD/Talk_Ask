@@ -1,8 +1,8 @@
 #cpRoomId {              
-    button {
+    .btnID {
         height: 45px;
         color: #835AFD;
-        background-color: #fff !important;
+        background-color: #fff;
         border: 2px solid #835AFD;
         border-radius: 10px;
         overflow: hidden;
@@ -24,6 +24,20 @@
         }
         &:hover {
             color: #fff;
+            border-color: #E73F5D!important;
+            background-color: #E73F5D!important;
+            div{
+                background-color: #E73F5D;
+                border-color: #fff;
+            }
+        }
+    }
+    .dark .btnID{
+        background-color: #ddd !important;
+        color: #835AFD !important;
+        
+        &:hover {
+            color: #fff!important;
             border-color: #E73F5D!important;
             background-color: #E73F5D!important;
             div{

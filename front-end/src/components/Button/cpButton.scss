@@ -28,8 +28,8 @@
     &.outline {
         padding: 0 10px;
         border: 2px solid #835AFD !important;
-        background-color: #fff !important;
         color: #835AFD !important;
+        background-color: #fff !important;
         
         &:hover {
             background-color: #E73F5D !important;
@@ -38,8 +38,9 @@
         }
     }
 }
+
 .dark {
-    button {
+    #cpButton {
         color: #DDD !important;
         background-color: #694ac7 !important;
         border-color: #694ac7 !important;

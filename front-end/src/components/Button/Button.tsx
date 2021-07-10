@@ -12,9 +12,11 @@ export function Button({isOutLine = false, ...props} : ButtonProps) {
     const { theme } = useTheme();
 
     return (
+        <div className={theme}>
         <button id="cpButton" className={` ${theme} ${isOutLine ? 'outline' : ''}`} {...props}>
             {props.title}
         </button>
+        </div>
     );
 }
   
